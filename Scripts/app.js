@@ -99,7 +99,7 @@
     function DisplayHomePage() {
         console.log("Home Page");
         $("#AboutUsButton").on("click", function () {
-            location.href = "/about";
+            LoadLink("about");
         });
         $("main").append(`<p id="MainParagraph" class="mt-3">This is the Main Paragraph</p>`);
         $("main").append(`<article>
@@ -240,6 +240,7 @@
             $("#logout").on("click", function () {
                 sessionStorage.clear();
                 $("#login").html(`<a class="nav-link" data="login"><i class="fas fa-sign-in-alt"></i> Login</a>`);
+                AddNavigationEvents();
                 LoadLink("login");
             });
         }
