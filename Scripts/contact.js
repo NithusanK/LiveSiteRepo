@@ -2,11 +2,9 @@
 var core;
 (function (core) {
     class Contact {
-        constructor(fullName = "", contactNumber = "", emailAddress = "") {
-            this.m_fullName = fullName;
-            this.m_contactNumber = contactNumber;
-            this.m_emailAddress = emailAddress;
-        }
+        m_fullName;
+        m_contactNumber;
+        m_emailAddress;
         get FullName() {
             return this.m_fullName;
         }
@@ -23,6 +21,11 @@ var core;
             return this.m_emailAddress;
         }
         set EmailAddress(emailAddress) {
+            this.m_emailAddress = emailAddress;
+        }
+        constructor(fullName = "", contactNumber = "", emailAddress = "") {
+            this.m_fullName = fullName;
+            this.m_contactNumber = contactNumber;
             this.m_emailAddress = emailAddress;
         }
         serialize() {

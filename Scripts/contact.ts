@@ -28,7 +28,7 @@ namespace core
             this.m_contactNumber = contactNumber;
         }
 
-        public get EmailAddress():string
+        public get EmailAddress(): string
         {
             return this.m_emailAddress;
         }
@@ -95,3 +95,6 @@ namespace core
     }
 
 }
+
+
+
